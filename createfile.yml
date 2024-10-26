@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: true
   tasks:
   - name: Create a file
     file: 
@@ -8,4 +9,3 @@
       owner: ansible
       group: root
       state: touch
-    #become: yes
