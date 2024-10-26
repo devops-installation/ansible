@@ -7,5 +7,5 @@
       scr: /etc/nginx/sites-available/wordpress
       dest: /etc/nginx/sites-enabled/wordpress
       owner: ansible
-      group: nginx
+      group: ansible
       state: link
