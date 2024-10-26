@@ -5,8 +5,6 @@
   - name: upgrede
     apt:
       upgrede: dist
-  - name: update_cache
-    apt:
       update_cache: yes
   - name: Install Apache2
     apt:
