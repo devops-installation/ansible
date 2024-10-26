@@ -1,0 +1,12 @@
+---
+- hosts: de9to
+  become: true
+  tasks:
+  - name: create a symlink
+    ansible.builtin.file: 
+      scr: /etc/nginx/sites-available/wordpress
+      dest: /etc/nginx/sites-enabled/wordpress
+      owner: ansible
+      group: nginx
+      state: link
+      
