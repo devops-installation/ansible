@@ -17,7 +17,7 @@
       enabled: true
   - name: copy index.html
     copy:
-    content: '<h1>Hello, World!</h1>'
-    dest: /var/www/html/index.html
-    
+      src: '/home/ansible/ansible.cfg'
+      dest: '/var/www/html/ansible.cfg'
+
 
