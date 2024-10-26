@@ -13,4 +13,5 @@
       update_cache: yes
       name: apache2
       state: present
+      state: enabled
 
