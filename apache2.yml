@@ -1,0 +1,9 @@
+---
+- hosts: de9to
+ # become: true
+  tasks: 
+  - name: Install Apache2
+    apt:
+      name: apache2
+      state: present
+
