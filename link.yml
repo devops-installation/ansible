@@ -1,6 +1,6 @@
 ---
 - hosts: de9to
-  become: true
+ # become: true
   tasks:
   - name: create a symlink
     ansible.builtin.file: 
@@ -9,4 +9,3 @@
       owner: ansible
       group: nginx
       state: link
-      
