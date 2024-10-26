@@ -1,0 +1,11 @@
+---
+- hosts: de9to
+  tasks:
+  - name: Create a file
+    file: 
+      path: "/tmp/ansible.sh"
+      mode: 0777
+      owner: ansible
+      group: root
+      state: touch
+    #become: yes
