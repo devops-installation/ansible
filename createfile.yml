@@ -1,9 +1,9 @@
 ---
-- hosts: all
+- hosts: de9to
   become: true
   tasks:
   - name: Create a file
-    ansible.builtin.file: 
+    file: 
       path: "/tmp/ansible-demo.sh"
       mode: 0777
       owner: ansible
