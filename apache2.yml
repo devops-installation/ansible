@@ -2,16 +2,14 @@
 - hosts: de9to
   become: true
   tasks:
-  # - name: upgrede
-  #   apt:
-  #     upgrede: dist
-
-
-  - name: Install Apache2
+  - name: upgrede
     apt:
       upgrede: dist
+  - name: update_cache
+    apt:
       update_cache: yes
+  - name: Install Apache2
+    apt:
       name: apache2
       state: present
-      state: enabled
 
