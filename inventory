@@ -1,0 +1,6 @@
+[webservers]
+de9to ansible_host=20.244.105.84
+maven ansible_host=34.122.118.180
+retailhub ansible_host=app.retailhub.ai
+[dbservers]
+abhicare ansible_host=34.131.185.135

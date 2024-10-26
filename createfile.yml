@@ -6,6 +6,6 @@
       path: "/tmp/ansible.sh"
       mode: 0777
       owner: ansible
-      group: root
+      group: ansible
       state: touch
     #become: yes
