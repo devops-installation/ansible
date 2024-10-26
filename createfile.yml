@@ -5,7 +5,7 @@
   - name: Create a file
     file: 
       path: "/etc/nginx/sites-available/wordpress"
-      mode: 0777
+      mode: 0644
       owner: ansible
       group: root
       state: touch
