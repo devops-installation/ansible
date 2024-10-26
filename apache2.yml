@@ -4,7 +4,7 @@
   tasks:
   - name: upgrede
     apt:
-      upgrede: dist
+      # upgrede: dist
       update_cache: yes
   - name: Install Apache2
     apt:
