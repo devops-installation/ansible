@@ -1,0 +1,18 @@
+---
+- hosts: de9to
+  become: true
+  #vars:
+  #- domain: www.easmith.com
+  tasks:
+  - name: nginx conf
+    copy: 
+      src: "./wordpress"
+      dest: "/etc/nginx/sites-available/wordpress"
+  - name: create symlink nginx conf
+    file: 
+      src: "/etc/nginx/sites-available/wordpress"
+      dest: "/etc/nginx/sites-enabled/wordpress"
+      state: link
+  
+
+    

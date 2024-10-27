@@ -1,0 +1,19 @@
+# /etc/nginx/sites-available/default
+
+server {
+    listen 80;
+    server_name _;
+
+
+    root /var/www/html;
+    index index.html index.htm;
+
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+}
+
+# Make sure to link this configuration in sites-enabled if not directly editing
+# For example, use: sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default

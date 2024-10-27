@@ -23,5 +23,6 @@
     template: # var apply when copy
       src: '/home/ansible/ansible/index.html'
       dest: '/var/www/html/index.html'
+    
 
 
