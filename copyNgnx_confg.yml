@@ -8,6 +8,7 @@
     copy: 
       src: "./node"
       dest: "/etc/nginx/sites-available/node"
+    notify: reload nginx Server
   - name: create symlink nginx conf
     file: 
       src: "/etc/nginx/sites-available/node"
