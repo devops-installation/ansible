@@ -6,12 +6,12 @@
   tasks:
   - name: nginx conf
     copy: 
-      src: "./wordpress"
-      dest: "/etc/nginx/sites-available/wordpress"
+      src: "./node"
+      dest: "/etc/nginx/sites-available/node"
   - name: create symlink nginx conf
     file: 
-      src: "/etc/nginx/sites-available/wordpress"
-      dest: "/etc/nginx/sites-enabled/wordpress"
+      src: "/etc/nginx/sites-available/node"
+      dest: "/etc/nginx/sites-enabled/node"
       state: link
     notify: reload nginx Server
   
