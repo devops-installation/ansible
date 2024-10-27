@@ -19,7 +19,7 @@
   #     state: started  # we need to stop nginx if its running
   #     enabled: true
   - name: copy index.html
-    copy:
+    template:
       src: '/home/ansible/ansible/index.html'
       dest: '/var/www/html/index.html'
 
