@@ -5,7 +5,7 @@
   - componyName: "mithunTehno"
   - location: "mumbai"
   tasks:
-  - name: upgrede
+  - name: update
     apt:
       # upgrede: dist
       update_cache: yes
@@ -21,6 +21,6 @@
   - name: copy index.html
     copy:
       src: '/home/ansible/ansible/index.html'
-      dest: '/var/www/html/ansible/index.html'
+      dest: '/var/www/html/index.html'
 
 
