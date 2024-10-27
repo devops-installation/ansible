@@ -2,8 +2,8 @@
 - hosts: de9to
   become: true
   vars:
-  - componyName: "phanases.org"
-  - location: "Thane"
+  - componyName: "dento"
+  - location: "locknow"
   tasks:
   - name: update
     apt:

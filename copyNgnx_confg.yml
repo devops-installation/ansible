@@ -13,6 +13,15 @@
       src: "/etc/nginx/sites-available/wordpress"
       dest: "/etc/nginx/sites-enabled/wordpress"
       state: link
+    notify: reload nginx Server
+  
+  handlers: # handler is special tasks, which execute notified by other tasks
+  - name: reload nginx Server
+    service: 
+      name: nginx
+      state: reloaded 
+      enabled: true
+
   
 
     
