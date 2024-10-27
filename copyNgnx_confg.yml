@@ -1,9 +1,15 @@
 ---
 - hosts: de9to
   become: true
-  #vars:
-  #- domain: www.easmith.com
+  vars:
+  # - domain: "wordpress.easesmith.com"
+  - componyName: "dento"
+  - location: "Lucknow"
   tasks:
+  - name: copy index.html
+    template: # var apply when copy
+      src: '/home/ansible/ansible/index.html'
+      dest: '/var/www/html/index.html'
   - name: nginx conf
     copy: 
       src: "./node"
@@ -20,7 +26,7 @@
   - name: reload nginx Server
     service: 
       name: nginx
-      state: reloaded 
+      state: reloaded
       enabled: true
 
   
