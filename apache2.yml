@@ -1,6 +1,9 @@
 ---
 - hosts: de9to
   become: true
+  vars:
+  - componyName: "mithunTehno"
+  - location: "mumbai"
   tasks:
   - name: upgrede
     apt:
@@ -17,7 +20,7 @@
   #     enabled: true
   - name: copy index.html
     copy:
-      src: '/home/ansible/ansible.cfg'
-      dest: '/var/www/html/ansible.cfg'
+      src: '/home/ansible/ansible/index.html'
+      dest: '/var/www/html/ansible/index.html'
 
 
