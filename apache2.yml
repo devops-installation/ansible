@@ -2,8 +2,8 @@
 - hosts: de9to
   become: true
   vars:
-  - componyName: "mithunTehno"
-  - location: "mumbai"
+  - componyName: "phanases.org"
+  - location: "Thane"
   tasks:
   - name: update
     apt:
