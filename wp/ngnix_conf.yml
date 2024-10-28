@@ -9,6 +9,7 @@
     template:
       src: "./wordpress"
       dest: "/etc/nginx/sites-available/wordpress"
+    notify: reload nginx server
   - name: symlink wordpress" conf file
     file:
       src: "/etc/nginx/sites-available/wordpress"
