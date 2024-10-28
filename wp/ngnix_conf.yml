@@ -1,0 +1,25 @@
+---
+- hosts: de9to
+  become: yes
+  vars:
+  - domain: "de9towp.easesmith.com"
+  - port: "8083"
+  tasks:
+  - name: copy file
+    template:
+      src: "./wordpress"
+      dest: "/etc/nginx/sites-available/wordpress"
+  - name: symlink wordpress" conf file
+    file:
+      src: "/etc/nginx/sites-available/wordpress"
+      dest: "/etc/nginx/sites-enabled/wordpress"
+      state: link
+    notify: reload nginx server
+  handlers:
+  - name: reload nginx server
+    service:
+      name: nginx
+      state: reloaded
+      enabled: true
+
+  

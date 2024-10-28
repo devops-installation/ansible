@@ -1,10 +1,11 @@
 ---
 - hosts: de9to
   become: true
-  vars:
+  vars_files:
+  - var.yml
   # - domain: "wordpress.easesmith.com"
-  - componyName: "dento"
-  - location: "Lucknow"
+  # - componyName: "dento"
+  # - location: "Lucknow"
   tasks:
   - name: copy index.html
     template: # var apply when copy
@@ -12,13 +13,13 @@
       dest: '/var/www/html/index.html'
   - name: nginx conf
     copy: 
-      src: "./node"
-      dest: "/etc/nginx/sites-available/node"
+      src: "./wordpress"
+      dest: "/etc/nginx/sites-available/wordpress"
     notify: reload nginx Server
   - name: create symlink nginx conf
     file: 
-      src: "/etc/nginx/sites-available/node"
-      dest: "/etc/nginx/sites-enabled/node"
+      src: "/etc/nginx/sites-available/wordpress"
+      dest: "/etc/nginx/sites-enabled/wordpress"
       state: link
     notify: reload nginx Server
   
