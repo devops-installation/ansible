@@ -1,0 +1,18 @@
+---
+- hosts: de9to
+  become: true
+  vars:
+  - domain: "de9towp.easesmith.com"
+  - email: "de9to@gmail.com"
+  tasks:
+  - name: certbot and ngnix plugin
+    apt:
+     name: 
+     - certbot
+     - python3-certbot-nginx
+     state: present
+     update_cache: true
+  - name: install ssl 
+    command: >
+      certbot --nginx -d {{domain}} --non-intera--non-interactive --agree-tos --{{email}}
+
