@@ -4,7 +4,6 @@
   tasks:
   - name: Install wordpress
     file:
-    - name: create Dir
       state: directory
       path: "/home/shubham/wordpress"
       mode: "0755"
