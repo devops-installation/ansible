@@ -4,7 +4,7 @@
   vars:
   - port: "8083"
   tasks:
-  - name: Install wordpress
+  - name: create Dir "wordpress"
     file:
       state: directory
       path: "/home/shubham/wordpress"
@@ -17,7 +17,10 @@
       dest: "/home/shubham/wordpress/docker-compose.yml"
       mode: "0755"
       owner: shubham
-      group: shubham      
+      group: shubham
+  - name: install wp on docker  
+    command: >
+      docker-compose up -d    
 
 
 
