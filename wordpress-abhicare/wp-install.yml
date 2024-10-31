@@ -21,7 +21,7 @@
   - name: install wp on docker  
     command: > 
       docker-compose up -d  
-      args: 
+    args: 
         chdir: "/home/shubham/wordpress" 
 
 
