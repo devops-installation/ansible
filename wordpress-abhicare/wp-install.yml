@@ -11,10 +11,13 @@
       mode: "0755"
       owner: shubham
       group: shubham
+  - name: Deploy docker-compose.yml file
     template:
       src: "./docker-compose.yml"
       dest: "/home/shubham/wordpress/docker-compose.yml"
-
+      mode: "0755"
+      owner: shubham
+      group: shubham      
 
 
 
