@@ -14,9 +14,6 @@
     template:
       src: "./docker-compose.yml"
       dest: "/home/shubham/wordpress/docker-compose.yml"
-      group: shubham
-      owner: shubham
-      mode: "0755"
 
 
 
