@@ -1,0 +1,15 @@
+---
+- hosts: abhicare
+  become: true
+  tasks:
+  - name: Install wordpress
+    file:
+    - name: create Dir
+      state: directory
+      path: "/home/shubham/wordpress"
+      mode: "0755"
+      owner: shubham
+      group: shubham
+
+
+     
