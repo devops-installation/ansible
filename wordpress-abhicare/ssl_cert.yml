@@ -1,5 +1,5 @@
 ---
-- hosts: de9to
+- hosts: abhicare
   become: true
   vars:
   - domain: "blog.abhicares.com"
