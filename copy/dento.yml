@@ -1,6 +1,6 @@
 ---
 - hosts: de9to
-  become: yes
+  become: true
   tasks:
   - name: copy content
     synchronize:
