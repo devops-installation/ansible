@@ -5,7 +5,7 @@
       synchronize:
         src: "/home/ubuntu/Capsico-backend/"
         dest: "/home/shubham/workspace/caspio-fe/"
-        archive: yes
+        # archive: yes
         # checksum: yes
         # recursive: yes
         # delete: yes
