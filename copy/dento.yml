@@ -1,11 +1,14 @@
----
 - hosts: de9to
   become: true
   tasks:
-  - name: copy content
-    synchronize:
+    - name: Synchronize backend content to frontend directory
+      synchronize:
         src: "/home/ubuntu/Capsico-backend/"
         dest: "/home/shubham/workspace/caspio-fe/"
-        rsync_opts:
-          - "--exclude=node_modules"
+        archive: yes
+        checksum: yes
+        recursive: yes
+        delete: yes
+        owner: shubham
+        group: shubham
     
