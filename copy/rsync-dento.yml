@@ -11,5 +11,5 @@
         delete: yes
         owner: yes
         group: yes
-        exclude: 
+        rsync_opts: 
         - "node_modules"
