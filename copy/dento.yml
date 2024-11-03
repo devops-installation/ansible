@@ -11,4 +11,5 @@
         delete: yes
         owner: shubham
         group: shubham
-    
+        exclude: 
+        - "node_modules"
