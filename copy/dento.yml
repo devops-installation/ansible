@@ -8,5 +8,4 @@
         dest: "/home/shubham/workspace/caspio-fe/"
         rsync_opts:
           - "--exclude=node_modules"
-          - "--chmod=755"
     
