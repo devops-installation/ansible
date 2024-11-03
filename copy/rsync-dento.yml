@@ -4,7 +4,7 @@
     - name: Synchronize backend content to frontend directory
       synchronize:
         src: "/home/ubuntu/Capsico-backend/"
-        dest: "/home/shubham/workspace/caspio-fe/"
+        dest: "/home/shubham/"
         # archive: yes
         # checksum: yes
         # recursive: yes
