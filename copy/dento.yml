@@ -1,0 +1,12 @@
+---
+- hosts: de9to
+  become: yes
+  tasks:
+  - name: copy content
+    synchronize:
+        src: "/home/ubuntu/Capsico-backend/"
+        dest: "/home/shubham/workspace/caspio-fe/"
+        rsync_opts:
+          - "--exclude=node_modules"
+          - "--chmod=755"
+    

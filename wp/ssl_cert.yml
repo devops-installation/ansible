@@ -1,7 +1,7 @@
 ---
 - hosts: de9to
   become: true
-  vars:
+  vars: 
   - domain: "blog.abhicares.com"
   - email: "de9to@gmail.com"
   tasks:
