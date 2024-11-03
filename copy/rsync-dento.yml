@@ -6,10 +6,10 @@
         src: "/home/ubuntu/Capsico-backend/"
         dest: "/home/shubham/workspace/caspio-fe/"
         archive: yes
-        checksum: yes
-        recursive: yes
-        delete: yes
-        owner: yes
-        group: yes
-        rsync_opts: 
-        - "node_modules"
+        # checksum: yes
+        # recursive: yes
+        # delete: yes
+        # owner: yes
+        # group: yes
+        # rsync_opts: 
+        # - "node_modules"
