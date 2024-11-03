@@ -9,7 +9,7 @@
         checksum: yes
         recursive: yes
         delete: yes
-        owner: "shubham"
-        group: "shubham"
+        owner: yes
+        group: yes
         exclude: 
         - "node_modules"
