@@ -1,8 +1,8 @@
 ---
-- hosts: abhicare
+- hosts: de9to
   become: yes
   vars:
-  - domain: "blog.abhicares.com"
+  - domain: "de9toblog.easesmith.com"
   - port: "8083"
   tasks:
   - name: copy file

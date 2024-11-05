@@ -2,7 +2,7 @@
 - hosts: de9to
   become: true
   vars: 
-  - domain: "blog.abhicares.com"
+  - domain: "de9toblog.easesmith.com"
   - email: "de9to@gmail.com"
   tasks:
   - name: certbot and ngnix plugin
