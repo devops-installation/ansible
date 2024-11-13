@@ -1,0 +1,18 @@
+---
+- hosts: freedebt
+  become: true
+  vars: 
+  - domain: "clients.freedebt.in"
+  - email: "freedebt@gmail.com"
+  tasks:
+  - name: certbot and ngnix plugin
+    apt:
+     name: 
+     - certbot
+     - python3-certbot-nginx
+     state: present
+     update_cache: true
+  - name: install ssl 
+    command: >
+      sudo certbot --nginx -d {{domain}} --non-interactive --agree-tos --email {{email}}
+

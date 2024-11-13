@@ -1,0 +1,26 @@
+---
+- hosts: freedebt
+  become: yes
+  vars:
+  - domain: "clients.freedebt.in"
+  - port: "5000"
+  tasks:
+  - name: copy file
+    template:
+      src: "./node"
+      dest: "/etc/nginx/sites-available/node"
+    notify: reload nginx server
+  - name: symlink node" conf file
+    file:
+      src: "/etc/nginx/sites-available/node"
+      dest: "/etc/nginx/sites-enabled/node"
+      state: link
+    notify: reload nginx server
+  handlers:
+  - name: reload nginx server
+    service:
+      name: nginx
+      state: reloaded
+      enabled: true
+
+  
